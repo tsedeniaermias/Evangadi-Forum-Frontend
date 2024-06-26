@@ -6,6 +6,7 @@ import "./Home.css";
 
 import userImg from "../../assets/Images/user.png";
 import { MdKeyboardArrowRight } from "react-icons/md";
+import { toast } from "react-toastify";
 
 function Home() {
   const navigate = useNavigate();
@@ -13,8 +14,9 @@ function Home() {
   const token = localStorage.getItem("token");
   const [values, setValues] = useState([]);
   useEffect(() => {
-    if (!token) {
-      alert("Please Login");
+    if (!token || !user) {
+      // alert("Please Login");
+      toast("Please Login");
       navigate("/");
       return;
     }
