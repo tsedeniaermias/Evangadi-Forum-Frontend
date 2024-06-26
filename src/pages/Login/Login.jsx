@@ -57,12 +57,12 @@ function Login({ setIsLogin }) {
     <section className={classes.login_section}>
      
       <div className={classes.login_container}>
-        {isLoading ? (
+        {/* {isLoading ? (
           <div className={classes.loader_container}>
             <Loader color="#ff8500" />
           </div>
         ) : (
-          <>
+          <> */}
             <div className={classes.login_text}>
               <h3>Log in to your account</h3>
               <p>
@@ -107,8 +107,8 @@ function Login({ setIsLogin }) {
                 </button>
               </div>
             </form>
-          </>
-        )}
+          {/* </>
+        )} */}
       </div>
     </section>
   );

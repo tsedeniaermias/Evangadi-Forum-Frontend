@@ -4,6 +4,7 @@ import { useParams, useNavigate, Link } from "react-router-dom";
 import userImg from "../../assets/Images/user.png";
 import Loader from "../../Components/Loader/Loader";
 import "./QuestionDetail.css";
+import { toast } from "react-toastify";
 
 const QuestionDetail = () => {
   const navigate = useNavigate();
@@ -74,12 +75,14 @@ const QuestionDetail = () => {
         },
         config
       );
-      alert("answer post sucessful");
+      // alert("answer post sucessful");
+      toast.success("answer post sucessful");
       window.location.reload();
 
       //   navigate("/");
     } catch (error) {
-      alert(error?.response?.data?.msg);
+      // alert(error?.response?.data?.msg);
+      toast.error(error?.response?.data?.msg);
       console.log(error.response);
     }
   }
