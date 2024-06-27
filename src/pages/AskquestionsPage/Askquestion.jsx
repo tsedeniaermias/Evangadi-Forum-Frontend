@@ -88,7 +88,7 @@ const Askquestion = () => {
             <button type="submit">
               <button type="submit">
                 {isLoading ? (
-                  <Loader color="#ff8500" size={10} />
+                  <Loader color="#ff8500" size={5} />
                 ) : (
                   "Post Your Question"
                 )}

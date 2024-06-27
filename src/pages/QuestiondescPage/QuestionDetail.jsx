@@ -142,7 +142,7 @@ const QuestionDetail = () => {
 
               <button type="submit" className="answer_button">
                 {isLoading ? (
-                  <Loader color="#ff8500" size={10} />
+                  <Loader color="#ff8500" size={5} />
                 ) : (
                   "Post Your Answer"
                 )}
